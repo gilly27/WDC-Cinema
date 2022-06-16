@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 .title {
-	background-color: #262626;
+	background-color: #53415C;
 	align-items: top;
     justify-content: top;
 }
 
 body {
-    background-color: #262626;
-    font-family: 'Roboto Mono', monospace;
+    background-color: #53415C;
+    font-family: helvetica;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +42,7 @@ body {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
 	position: relative;
+
 }
 
 #autocomplete-container {
@@ -167,6 +167,18 @@ form-control textarea:focus {
 
 .form {
     padding: 40px 30px;
+	background-color: #C39FD5;
+	border-radius: 5px;
+}
+
+.form h1 {
+    text-align: center;
+	font-size: 50px;
+}
+
+.form h2 {
+    text-align: center;
+	font-size: 30px;
 }
 
 .form button {

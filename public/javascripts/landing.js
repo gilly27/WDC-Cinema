@@ -72,7 +72,6 @@ function setSuccessFor(input) {
 	formControl.className = 'form-control success';
 }
 
-function Signup()
-{
-    window.location.href = '/signup';
+function Signup(input) {
+	window.location.href = '/signup';
 }
