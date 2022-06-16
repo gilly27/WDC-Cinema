@@ -6,15 +6,19 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="/javascripts/main.js" defer></script>
   </head>
-  <body onload="currentMovies()">
+  <body onload="getScreenings()">
     <div class="header">
         <h1>GILCHRIST PICTURES</h1>
     </div>
     <div class="container">
       <h1>Now showing!</h1>
-      <div id="app" v-for = "(screening, i) in currentScreenings">
-        <i></i><i><b> {{movie.name}}</b></i><br><br>
-        <i></i><i> {{movie.time}}</i><br><br>
+      <div id="app">
+        <li v-for = "movie in currentScreenings">
+          <h2>Movie: {{movie.movie_name}}</h2>
+          <h2>Date: {{movie.date}}</h2>
+          <h2>Time: {{movie.time}}</h2>
+          <button>Create booking</button>
+        </li>
       </div>
     </div>
   </body>

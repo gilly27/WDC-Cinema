@@ -18,14 +18,16 @@ router.get('/getmovies', function(req, res) {
   req.pool.getConnection(function(error, connection) {
     if(error){
       res.sendStatus(500);
+      console.log(error);
       return;
     }
 
-    let query = "SELECT (movie_name, start_time) FROM screening INNER JOIN movie ON screening.movie_id = movie.movie_id;"
+    let query = "SELECT movie_name, start_time FROM movie INNER JOIN screening ON movie.movie_id = screening.movie_id;"
     connection.query(query, function(error,rows, fields) {
       connection.release();
       if(error) {
         res.sendStatus(500);
+        console.log(error);
         return;
       }
       else

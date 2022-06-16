@@ -58,5 +58,18 @@ CREATE TABLE movie (
     PRIMARY KEY (movie_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO movie (movie_name) VALUES ('Lightyear');
-INSERT INTO screening (start_time, end_time, movie_id) VALUES ('2022-16-6 13:00:00', '2022-16-6 15:00:00', 1);
+INSERT INTO movie (movie_name) VALUES
+('Lightyear'),
+('Jurassic World Dominion'),
+('Top Gun: Maverick');
+
+INSERT INTO screening (start_time, end_time, movie_id) VALUES
+('2022-06-16 13:00:00', '2022-06-16 15:00:00', 1),
+('2022-06-17 13:00:00', '2022-06-17 15:00:00', 1),
+('2022-06-18 13:00:00', '2022-06-18 15:00:00', 1),
+('2022-06-16 13:00:00', '2022-06-16 15:00:00', 2),
+('2022-06-17 13:00:00', '2022-06-17 15:00:00', 2),
+('2022-06-18 13:00:00', '2022-06-18 15:00:00', 2),
+('2022-06-16 13:00:00', '2022-06-16 15:00:00', 3),
+('2022-06-17 13:00:00', '2022-06-17 15:00:00', 3),
+('2022-06-18 13:00:00', '2022-06-18 15:00:00', 3);
