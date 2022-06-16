@@ -11,8 +11,6 @@ CREATE TABLE screenings (
     startTime datetime
     endTime datetime
     movieID
-    seatID
-    userID
 );
 
 CREATE TABLE movies (
