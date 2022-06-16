@@ -58,3 +58,5 @@ CREATE TABLE movie (
     PRIMARY KEY (movie_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO movie (movie_name) VALUES ('Lightyear');
+INSERT INTO screening (start_time, end_time, movie_id) VALUES ('2022-16-6 13:00:00', '2022-16-6 15:00:00', 1);
