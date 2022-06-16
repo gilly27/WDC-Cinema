@@ -35,11 +35,12 @@ body {
 	text-align: center;
 	border-radius: 10px;
 	height: 100%;
-    width: 50%;
+    width: 60%;
     position: fixed;
     z-index: 1;
     top: 150;
     left: 150;
+	overflow-x: hidden;
 }
 .rightbar {
 	background-color: #7C4420;
@@ -48,9 +49,10 @@ body {
 	text-align: center;
 	border-radius: 10px;
 	height: 100%;
-    width: 50%;
+    width: 30%;
     position: fixed;
     z-index: 1;
     top: 150;
-    right: 150;
+    right: 0;
+	overflow-x: hidden;
 }

@@ -15,22 +15,17 @@
       <div id="app">
         <li v-for = "movie in currentScreenings">
           <h2>{{movie.movie_name}}</h2>
-          <h2>Date: {{movie.date}}</h2>
-          <h2>Time: {{movie.time}}</h2>
           <button>Create booking</button>
         </li>
       </div>
     </div>
     <div class="rightbar">
-      <h1>Now showing!</h1>
-      <div id="app">
+      <h1>Session times: </h1>
         <li v-for = "movie in currentScreenings">
-          <h2>{{movie.movie_name}}</h2>
           <h2>Date: {{movie.date}}</h2>
           <h2>Time: {{movie.time}}</h2>
           <button>Create booking</button>
         </li>
-      </div>
     </div>
   </body>
 </html>
