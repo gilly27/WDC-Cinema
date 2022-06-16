@@ -55,21 +55,22 @@ CREATE TABLE seat (
 CREATE TABLE movie (
     movie_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     movie_name VARCHAR(255) NOT NULL,
+    image_url VARCHAR(512) NOT NULL,
     PRIMARY KEY (movie_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO movie (movie_name) VALUES
-('Lightyear'),
-('Jurassic World Dominion'),
-('Top Gun: Maverick');
+INSERT INTO movie (movie_name, image_url) VALUES
+('Lightyear', 'https://www-s3.hoyts.com.au/movies/AU/HO00006927/large.jpg'),
+('Jurassic World Dominion', 'https://www-s3.hoyts.com.au/movies/AU/HO00006430/large.jpg'),
+('Top Gun: Maverick', 'https://www-s3.hoyts.com.au/movies/AU/HO00003807/large.jpg');
 
 INSERT INTO screening (start_time, end_time, movie_id) VALUES
-('2022-06-16 13:00:00', '2022-06-16 15:00:00', 1),
-('2022-06-17 13:00:00', '2022-06-17 15:00:00', 1),
+('2022-06-16 11:00:00', '2022-06-16 13:00:00', 1),
+('2022-06-17 12:00:00', '2022-06-17 14:00:00', 1),
 ('2022-06-18 13:00:00', '2022-06-18 15:00:00', 1),
-('2022-06-16 13:00:00', '2022-06-16 15:00:00', 2),
-('2022-06-17 13:00:00', '2022-06-17 15:00:00', 2),
-('2022-06-18 13:00:00', '2022-06-18 15:00:00', 2),
-('2022-06-16 13:00:00', '2022-06-16 15:00:00', 3),
-('2022-06-17 13:00:00', '2022-06-17 15:00:00', 3),
-('2022-06-18 13:00:00', '2022-06-18 15:00:00', 3);
+('2022-06-16 14:00:00', '2022-06-16 16:00:00', 2),
+('2022-06-17 15:00:00', '2022-06-17 17:00:00', 2),
+('2022-06-18 16:00:00', '2022-06-18 18:00:00', 2),
+('2022-06-16 17:00:00', '2022-06-16 19:00:00', 3),
+('2022-06-17 18:00:00', '2022-06-17 20:00:00', 3),
+('2022-06-18 19:00:00', '2022-06-18 21:00:00', 3);

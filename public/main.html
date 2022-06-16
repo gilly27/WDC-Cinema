@@ -6,26 +6,27 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="/javascripts/main.js" defer></script>
   </head>
-  <body onload="getScreenings()">
+  <body onload="getMovies()">
     <div class="header">
         <h1>GILCHRIST PICTURES</h1>
     </div>
-    <div class="leftbar">
-      <h1>Now showing!</h1>
-      <div id="app">
-        <li v-for = "movie in currentScreenings">
-          <h2>{{movie.movie_name}}</h2>
-          <button>Create booking</button>
-        </li>
+    <div id="app">
+      <div class="leftbar">
+        <h1>Now showing!</h1>
+          <li class = "movieList" v-for = "movie in currentMovies">
+            <h2>{{movie.movie_name}}</h2>
+            <button v-on:click="getScreenings(movie.movie_name)">Show screenings</button>
+            <img v-bind:src=movie.image_url>
+          </li>
       </div>
-    </div>
-    <div class="rightbar">
-      <h1>Session times: </h1>
-        <li v-for = "movie in currentScreenings">
-          <h2>Date: {{movie.date}}</h2>
-          <h2>Time: {{movie.time}}</h2>
-          <button>Create booking</button>
-        </li>
+      <div class="rightbar">
+        <h1>Session times:</h1>
+          <li v-for = "movie in currentScreenings">
+            <h2>Date: {{movie.date}}</h2>
+            <h2>Time: {{movie.time}}</h2>
+            <button>Create booking</button>
+          </li>
+        </div>
     </div>
   </body>
 </html>
