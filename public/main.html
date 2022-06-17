@@ -11,22 +11,29 @@
         <h1>GILCHRIST PICTURES</h1>
     </div>
     <div id="app">
+
       <div class="leftbar">
         <h1>Now showing!</h1>
-          <li class = "movieList" v-for = "movie in currentMovies">
-            <h2>{{movie.movie_name}}</h2>
-            <button v-on:click="getScreenings(movie.movie_name)">Show screenings</button>
-            <img v-bind:src=movie.image_url>
-          </li>
+        <li class = "movieList" v-for = "movie in currentMovies">
+          <h2>{{movie.movie_name}}</h2>
+          <button v-on:click="getScreenings(movie.movie_name)">Show screenings</button>
+          <img v-bind:src=movie.image_url>
+        </li>
       </div>
-      <div class="rightbar">
-        <h1>Session times:</h1>
-          <li v-for = "movie in currentScreenings">
-            <h2>Date: {{movie.date}}</h2>
-            <h2>Time: {{movie.time}}</h2>
-            <button>Create booking</button>
-          </li>
-        </div>
+
+      <div class="toprightbar">
+        <h1>Session times: </h1>
+        <li v-for = "movie in currentScreenings">
+          <h2>Date: {{movie.date}}</h2>
+           <h2>Time: {{movie.time}}</h2>
+           <button>Find seats for {{movie.movie_name}}</button>
+        </li>
+      </div>
+
+      <div class="bottomrightbar">
+        <h1>Seat finder (Key: RED - taken, WHITE - available)</h1>
+      </div>
+
     </div>
   </body>
 </html>

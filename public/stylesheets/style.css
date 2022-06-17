@@ -74,22 +74,21 @@ ul {
 	list-style: none;
 }
 
-.rightbar {
+.toprightbar {
 	background-color: #7C4420;
 	margin: auto;
 	display: block;
 	text-align: center;
 	border-radius: 10px;
-	height: 80%;
+	height: 30%;
     width: 30%;
     position: fixed;
     z-index: 1;
-    top: 150;
-    right: 0;
+    right: 2%;
 	overflow-x: hidden;
 }
 
-.rightbar li {
+.toprightbar li {
 	display: flex;
     flex-direction: row;
     align-items: center;
@@ -97,17 +96,32 @@ ul {
 	padding-left: 50px;
 }
 
-.rightbar h2 {
+.toprightbar h2 {
 
 	padding: 10px 10px 10px 10px;
 
 }
 
-.rightbar button {
+.toprightbar button {
 
 	padding: 10px 10px 10px 10px;
 	font-size: 20px;
 	color: lightgrey;
 	background-color: black;
 
+}
+
+.bottomrightbar {
+	background-color: #7C4420;
+	margin: auto;
+	display: block;
+	text-align: center;
+	border-radius: 10px;
+	height: 30%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    bottom: 10%;
+    right: 2%;
+	overflow-x: hidden;
 }

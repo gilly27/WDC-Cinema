@@ -50,7 +50,7 @@ router.get('/getscreenings', function(req, res) {
       return;
     }
 
-    let query = "SELECT start_time FROM screening INNER JOIN movie ON screening.movie_id = movie.movie_id WHERE movie.movie_name = '" + req.query.movieName + "';"
+    let query = "SELECT movie_name, start_time FROM screening INNER JOIN movie ON screening.movie_id = movie.movie_id WHERE movie.movie_name = '" + req.query.movieName + "';"
     connection.query(query, function(error,rows, fields) {
       connection.release();
       if(error) {
