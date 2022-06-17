@@ -22,17 +22,21 @@
       </div>
 
       <div class="toprightbar">
-        <h1>Session times: </h1>
+        <h1>Session times:</h1>
         <li v-for = "movie in currentScreenings">
           <h2>Date: {{movie.date}}</h2>
-           <h2>Time: {{movie.time}}</h2>
-           <button>Find seats for {{movie.movie_name}}</button>
+          <h2>Time: {{movie.time}}</h2>
+          <button v-on:click="getSeats(movie.screening_id)">Find seats for {{movie.movie_name}}</button>
         </li>
       </div>
 
       <div class="bottomrightbar">
-        <h1>Seat finder (Key: RED - taken, WHITE - available)</h1>
-      </div>
+        <h1>Seat finder:</h1>
+        <li v-for = "movie in currentSeats">
+          <h2>Seat row: {{movie.seat_row}}</h2>
+          <h2>Seat number: {{movie.seat_number}}</h2>
+          <button>Book (no functionality)</button>
+        <li>
 
     </div>
   </body>

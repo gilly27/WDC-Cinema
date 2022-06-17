@@ -3,8 +3,9 @@ var vueinst = new Vue({
     el: "#app",
 
     data:{
-    currentMovies: [],
-    currentScreenings: []
+        currentMovies: [],
+        currentScreenings: [],
+        currentSeats: [],
     },
 
     methods:{
@@ -18,11 +19,27 @@ var vueinst = new Vue({
                     {
                         vueinst.currentScreenings = JSON.parse(this.responseText);
                         vueinst.currentScreenings.forEach(convertDate);
-                        console.log(movieName);
                     }
                 };
 
             xhttp.open("GET", "/getscreenings?movieName="+movieName, true);
+            xhttp.send();
+        },
+
+        getSeats: function(screeningID) {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function()
+                {
+                    vueinst.currentSeats = [];
+                    if(this.readyState == 4 && this.status == 200)
+                    {
+                        vueinst.currentSeats = JSON.parse(this.responseText);
+                    }
+                };
+
+
+            xhttp.open("GET", "/getseats?screeningID="+screeningID, true);
             xhttp.send();
         }
     }
